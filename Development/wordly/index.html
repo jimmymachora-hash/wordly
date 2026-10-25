@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordly | Dictionary</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Wordly<span>.</span></h1>
+    <button id="theme-toggle" type="button" aria-label="Switch theme">
+      🌙 Dark Mode
+    </button>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <h2>Discover the meaning of any word.</h2>
+      <p>Your everyday dictionary. Learn a new word today!</p>
+    </section>
+
+    <form id="search-form">
+      <label for="word-input">Enter a word</label>
+      <div class="search-box">
+        <input
+          type="text"
+          id="word-input"
+          placeholder="e.g. beautiful"
+          autocomplete="off"
+          required
+        >
+        <button type="submit" id="search-button">Search</button>
+      </div>
+    </form>
+
+    <p id="status-message" role="status" aria-live="polite"></p>
+
+    <section id="word-result" aria-live="polite" hidden>
+      <div class="word-heading">
+        <div>
+          <h2 id="word-title"></h2>
+          <p id="phonetic"></p>
+        </div>
+        <button id="audio-button" type="button" hidden>
+          🔊 Play pronunciation
+        </button>
+      </div>
+
+      <div id="definitions"></div>
+
+      <section class="details">
+        <h3>Synonyms</h3>
+        <div id="synonyms"></div>
+      </section>
+
+      <button id="favorite-button" type="button">
+        ☆ Save to favorites
+      </button>
+    </section>
+
+    <section class="favorites-section">
+      <h2>My Favorite Words</h2>
+      <p id="favorites-empty">Your saved words will appear here.</p>
+      <ul id="favorites-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Wordly — Every word opens a new world.</p>
+  </footer>
+</body>
+</html>
